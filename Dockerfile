@@ -9,9 +9,9 @@ RUN chown planxuser:planxuser /data
 USER planxuser
 
 # paste the jar to the container
-COPY ./build/libs/solving-service-pdd4j-0.0.1.jar /
+COPY ./build/libs/solving-service-pddl4j-0.0.1.jar /
 
 ## for REST
 #EXPOSE 8090
 
-ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=${STAGE}", "solving-service-pdd4j-0.0.1.jar"]
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=${STAGE}", "solving-service-pddl4j-0.0.1.jar"]
